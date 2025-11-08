@@ -4,66 +4,67 @@ using Newtonsoft.Json;
 
 namespace APIVerve
 {
-public class data
-{
-    [JsonProperty("bank")]
-    public string bank { get; set; }
+    /// <summary>
+    /// Data data
+    /// </summary>
+    public class Data
+    {
+        [JsonProperty("bank")]
+        public string Bank { get; set; }
 
-    [JsonProperty("ifsc")]
-    public string ifsc { get; set; }
+        [JsonProperty("ifsc")]
+        public string Ifsc { get; set; }
 
-    [JsonProperty("branch")]
-    public string branch { get; set; }
+        [JsonProperty("branch")]
+        public string Branch { get; set; }
 
-    [JsonProperty("address")]
-    public string address { get; set; }
+        [JsonProperty("address")]
+        public string Address { get; set; }
 
-    [JsonProperty("contact")]
-    public string contact { get; set; }
+        [JsonProperty("contact")]
+        public string Contact { get; set; }
 
-    [JsonProperty("city")]
-    public string city { get; set; }
+        [JsonProperty("city")]
+        public string City { get; set; }
 
-    [JsonProperty("district")]
-    public string district { get; set; }
+        [JsonProperty("district")]
+        public string District { get; set; }
 
-    [JsonProperty("state")]
-    public string state { get; set; }
+        [JsonProperty("state")]
+        public string State { get; set; }
 
-    [JsonProperty("imps")]
-    public bool imps { get; set; }
+        [JsonProperty("imps")]
+        public bool Imps { get; set; }
 
-    [JsonProperty("rtgs")]
-    public bool rtgs { get; set; }
+        [JsonProperty("rtgs")]
+        public bool Rtgs { get; set; }
 
-    [JsonProperty("neft")]
-    public bool neft { get; set; }
+        [JsonProperty("neft")]
+        public bool Neft { get; set; }
 
-    [JsonProperty("upi")]
-    public bool upi { get; set; }
+        [JsonProperty("upi")]
+        public bool Upi { get; set; }
 
-    [JsonProperty("micr")]
-    public string micr { get; set; }
+        [JsonProperty("micr")]
+        public string Micr { get; set; }
 
-    [JsonProperty("swift")]
-    public string swift { get; set; }
+        [JsonProperty("swift")]
+        public string Swift { get; set; }
 
-}
+    }
+    /// <summary>
+    /// API Response object
+    /// </summary>
+    public class ResponseObj
+    {
+        [JsonProperty("status")]
+        public string Status { get; set; }
 
-public class ResponseObj
-{
-    [JsonProperty("status")]
-    public string status { get; set; }
+        [JsonProperty("error")]
+        public object Error { get; set; }
 
-    [JsonProperty("error")]
-    public object error { get; set; }
+        [JsonProperty("data")]
+        public Data Data { get; set; }
 
-    [JsonProperty("data")]
-    public data data { get; set; }
-
-    [JsonProperty("code")]
-    public int code { get; set; }
-
-}
-
+    }
 }
